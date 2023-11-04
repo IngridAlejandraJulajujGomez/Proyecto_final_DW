@@ -1,4 +1,4 @@
-const exp = require('constants');
+
 const express = require('express')
 const hbs= require('hbs');
 //configurar variable de entrono
@@ -11,17 +11,14 @@ const port = process.env.PORT
 app.set('view engine', 'hbs');
 
 //es donde se ubican los archivos a reutilizar
-hbs.registerPartials(__dirname+'/views/partials')
+hbs.registerPartials(__dirname +'/views/partials')
 
 app.use(express.static('public'))
 
 //controlador de la ruta principal
 //aquihacemos elllamado de hombe.hbs,noes necesario indicar el tipode archivo
 app.get('/',(req,res)=>{
-    res.render('home3',{
-        nombre: 'Ingrid Gomez',
-        titulo: 'Parcial Final'
-    })
+    res.render('home3')
 })
 
 
