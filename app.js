@@ -13,13 +13,15 @@ app.set('view engine', 'hbs');
 //es donde se ubican los archivos a reutilizar
 hbs.registerPartials(__dirname +'/views/partials')
 
-app.use(express.static('public'))
+app.use(express.static('home3'))
 
 //controlador de la ruta principal
 //aquihacemos elllamado de hombe.hbs,noes necesario indicar el tipode archivo
 app.get('/',(req,res)=>{
     res.render('home3')
 })
+
+
 
 
 app.listen(port,()=>{
